@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle, Lock, ArrowRight, Leaf, Star } from "lucide-react";
 
-// ─── Botanical SVG Ornaments ─────────────────────────────────────────────────
+// â”€â”€â”€ Botanical SVG Ornaments â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function LeafDivider({ className = "" }: { className?: string }) {
   return (
@@ -23,9 +23,9 @@ function LeafDivider({ className = "" }: { className?: string }) {
   );
 }
 
-function BotanicalFrame({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function BotanicalFrame({ children, className = "", style }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${className}`} style={style}>
       {/* Corner ornaments */}
       <svg className="absolute top-0 left-0 w-10 h-10 opacity-40" viewBox="0 0 40 40" fill="none">
         <path d="M2 2 L2 18 Q2 22 6 22 L22 22" stroke="#8B6914" strokeWidth="1" />
@@ -88,7 +88,7 @@ function BotanicalBackground() {
   );
 }
 
-// ─── Opt-In Form ─────────────────────────────────────────────────────────────
+// â”€â”€â”€ Opt-In Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function OptInForm() {
   const [firstName, setFirstName] = useState("");
@@ -116,7 +116,7 @@ function OptInForm() {
         <p className="font-jost text-bark/80 text-sm leading-relaxed" style={{ color: "rgba(92,61,30,0.8)" }}>
           Check your inbox for an email from Patty at<br />
           <em>Eat the Trees, Drink the Leaves.</em><br />
-          Make yourself a cup of tea — your guide is coming. 🌿
+          Make yourself a cup of tea â€” your guide is coming. ðŸŒ¿
         </p>
       </motion.div>
     );
@@ -170,7 +170,7 @@ function OptInForm() {
   );
 }
 
-// ─── Guide Cover Mockup ───────────────────────────────────────────────────────
+// â”€â”€â”€ Guide Cover Mockup â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function GuideCover() {
   return (
@@ -227,7 +227,7 @@ function GuideCover() {
   );
 }
 
-// ─── Main Page ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Main Page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -242,7 +242,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: "#F5F0E8" }}>
 
-      {/* ── Navigation ── */}
+      {/* â”€â”€ Navigation â”€â”€ */}
       <nav className="py-5 px-6 flex items-center justify-center border-b" style={{ borderColor: "rgba(139,105,20,0.15)" }}>
         <div className="flex flex-col items-center gap-0.5">
           <p className="font-cormorant italic text-lg font-medium" style={{ color: "#2D5A27" }}>Eat the Trees, Drink the Leaves</p>
@@ -251,7 +251,7 @@ export default function LandingPage() {
         </div>
       </nav>
 
-      {/* ── Hero ── */}
+      {/* â”€â”€ Hero â”€â”€ */}
       <section className="relative py-16 md:py-24 px-6 text-center overflow-hidden">
         <BotanicalBackground />
         <motion.div
@@ -298,19 +298,19 @@ export default function LandingPage() {
             className="max-w-xl mx-auto space-y-2"
           >
             <p className="font-jost text-base leading-relaxed" style={{ color: "rgba(92,61,30,0.75)" }}>
-              A free guide for women who are exhausted, overwhelmed, and ready to finally understand their nervous system — and heal it gently.
+              A free guide for women who are exhausted, overwhelmed, and ready to finally understand their nervous system â€” and heal it gently.
             </p>
           </motion.div>
 
           {/* Sub-lead */}
           <motion.div variants={fadeUp} className="mt-6 max-w-lg mx-auto space-y-1">
             <p className="font-cormorant italic text-lg" style={{ color: "#5C3D1E" }}>You&apos;re not lazy. You&apos;re not dramatic. You&apos;re not falling apart.</p>
-            <p className="font-cormorant italic text-lg" style={{ color: "#5C3D1E" }}>Your nervous system is dysregulated — and once you understand why, everything changes.</p>
+            <p className="font-cormorant italic text-lg" style={{ color: "#5C3D1E" }}>Your nervous system is dysregulated â€” and once you understand why, everything changes.</p>
           </motion.div>
         </motion.div>
       </section>
 
-      {/* ── Guide Cover + Form (Above the Fold on Desktop) ── */}
+      {/* â”€â”€ Guide Cover + Form (Above the Fold on Desktop) â”€â”€ */}
       <section className="py-10 md:py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -332,13 +332,13 @@ export default function LandingPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              <BotanicalFrame className="p-8 md:p-10" style={{ backgroundColor: "#FEFCF7" }}>
+              <BotanicalFrame className="p-8 md:p-10">
                 <div style={{ backgroundColor: "#FEFCF7" }} className="p-8 md:p-10 rounded-sm">
                   <h2 className="font-cormorant font-bold text-3xl md:text-4xl mb-2 leading-tight" style={{ color: "#2D5A27" }}>
-                    Yes! Send Me<br />the Free Guide 🌿
+                    Yes! Send Me<br />the Free Guide ðŸŒ¿
                   </h2>
                   <p className="font-jost text-sm leading-relaxed mb-7" style={{ color: "rgba(92,61,30,0.7)" }}>
-                    Enter your name and email below and I&apos;ll send it straight to your inbox — no spam, ever. Just gentle, healing wisdom for your journey.
+                    Enter your name and email below and I&apos;ll send it straight to your inbox â€” no spam, ever. Just gentle, healing wisdom for your journey.
                   </p>
                   <OptInForm />
                 </div>
@@ -350,7 +350,7 @@ export default function LandingPage() {
 
       <LeafDivider className="my-4" />
 
-      {/* ── Does This Sound Familiar ── */}
+      {/* â”€â”€ Does This Sound Familiar â”€â”€ */}
       <section className="py-14 md:py-20 px-6" style={{ backgroundColor: "#EDE6D6" }}>
         <div className="max-w-2xl mx-auto">
           <motion.div
@@ -360,7 +360,6 @@ export default function LandingPage() {
             variants={stagger}
             className="text-center mb-10"
           >
-            <motion.p variants={fadeUp} className="font-jost text-xs tracking-[0.3em] uppercase mb-3" style={{ color: "#8B6914" }}>Sarah Sees Herself Here</motion.p>
             <motion.h2 variants={fadeUp} className="font-cormorant font-bold text-4xl md:text-5xl" style={{ color: "#2D5A27" }}>
               Does any of this sound familiar?
             </motion.h2>
@@ -377,13 +376,13 @@ export default function LandingPage() {
             className="space-y-3"
           >
             {[
-              "You’re bone tired but can’t fall asleep — or stay asleep",
-              "You snap at people you love and don’t know why",
+              "Youâ€™re bone tired but canâ€™t fall asleep â€” or stay asleep",
+              "You snap at people you love and donâ€™t know why",
               "Sugar cravings hit like clockwork every afternoon",
               "Your body aches in ways no doctor can fully explain",
-              "You feel overwhelmed by things that shouldn’t be that hard",
+              "You feel overwhelmed by things that shouldnâ€™t be that hard",
               "You lie awake replaying conversations or worrying about tomorrow",
-              "You’re exhausted from carrying everything — and nobody seems to notice",
+              "Youâ€™re exhausted from carrying everything â€” and nobody seems to notice",
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -407,14 +406,14 @@ export default function LandingPage() {
             className="font-cormorant italic text-xl text-center mt-8"
             style={{ color: "#2D5A27" }}
           >
-            If you nodded at even one of these — this guide was written for you.
+            If you nodded at even one of these â€” this guide was written for you.
           </motion.p>
         </div>
       </section>
 
       <LeafDivider className="my-4" />
 
-      {/* ── What You'll Discover ── */}
+      {/* â”€â”€ What You'll Discover â”€â”€ */}
       <section className="py-14 md:py-20 px-6">
         <div className="max-w-2xl mx-auto">
           <motion.div
@@ -442,12 +441,12 @@ export default function LandingPage() {
             className="space-y-4"
           >
             {[
-              { text: "What your nervous system is actually doing — and why it matters for everything from sleep to digestion to sugar cravings", num: "01" },
-              { text: "The three nervous system states — and which one you’re likely stuck in right now", num: "02" },
-              { text: "Why women’s nervous systems are uniquely challenged — and why it’s not your fault", num: "03" },
+              { text: "What your nervous system is actually doing â€” and why it matters for everything from sleep to digestion to sugar cravings", num: "01" },
+              { text: "The three nervous system states â€” and which one youâ€™re likely stuck in right now", num: "02" },
+              { text: "Why womenâ€™s nervous systems are uniquely challenged â€” and why itâ€™s not your fault", num: "03" },
               { text: "5 signs your nervous system is crying out for support", num: "04" },
               { text: "6 gentle, daily practices to begin creating a safe place to heal", num: "05" },
-              { text: "How healing herbs support nervous system restoration — naturally and consistently", num: "06" },
+              { text: "How healing herbs support nervous system restoration â€” naturally and consistently", num: "06" },
               { text: "The faith-rooted framework that ties it all together", num: "07" },
             ].map((item) => (
               <motion.div
@@ -468,7 +467,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── About Patty ── */}
+      {/* â”€â”€ About Patty â”€â”€ */}
       <section className="py-14 md:py-20 px-6" style={{ backgroundColor: "#EDE6D6" }}>
         <div className="max-w-3xl mx-auto">
           <motion.div
@@ -497,27 +496,27 @@ export default function LandingPage() {
 
               <p className="font-cormorant font-semibold text-xl text-center mb-1" style={{ color: "#2D5A27" }}>Patty J. Militello</p>
               <p className="font-jost text-xs text-center tracking-wider mb-8" style={{ color: "#8B6914" }}>
-                Certified Autoimmune Holistic Nutrition Specialist · Herbalist · Stroke Survivor · Author
+                Certified Autoimmune Holistic Nutrition Specialist Â· Herbalist Â· Stroke Survivor Â· Author
               </p>
 
               <div className="border-l-2 pl-6 py-1" style={{ borderColor: "#8B6914" }}>
                 <p className="font-cormorant italic text-xl md:text-2xl leading-relaxed mb-4" style={{ color: "#3a2e1e" }}>
-                  &ldquo;After my hemorrhagic stroke, I had to learn everything about my own nervous system — not from a textbook, but from lived experience. I combined that with years of herbal study, holistic nutrition training, and deep faith to create a framework for healing that is gentle, sustainable, and rooted in how your body actually works.
+                  &ldquo;After my hemorrhagic stroke, I had to learn everything about my own nervous system â€” not from a textbook, but from lived experience. I combined that with years of herbal study, holistic nutrition training, and deep faith to create a framework for healing that is gentle, sustainable, and rooted in how your body actually works.
                 </p>
                 <p className="font-cormorant italic text-xl md:text-2xl leading-relaxed" style={{ color: "#3a2e1e" }}>
-                  I created this guide for every woman who is tired of being told everything is fine — when she knows deep down that something needs to change.&rdquo;
+                  I created this guide for every woman who is tired of being told everything is fine â€” when she knows deep down that something needs to change.&rdquo;
                 </p>
               </div>
 
               <p className="font-jost text-sm font-medium mt-6 text-right" style={{ color: "#2D5A27" }}>
-                — Patty J. Militello, <em className="font-cormorant text-base">Eat the Trees, Drink the Leaves</em> 🌿
+                â€” Patty J. Militello, <em className="font-cormorant text-base">Eat the Trees, Drink the Leaves</em> ðŸŒ¿
               </p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* ── What Happens Next ── */}
+      {/* â”€â”€ What Happens Next â”€â”€ */}
       <section className="py-14 md:py-20 px-6">
         <div className="max-w-xl mx-auto text-center">
           <motion.div
@@ -537,7 +536,7 @@ export default function LandingPage() {
                 { step: "1", text: "Check your inbox for an email from Patty at Eat the Trees, Drink the Leaves" },
                 { step: "2", text: "Download your free guide" },
                 { step: "3", text: "Find a quiet moment, make yourself a cup of tea, and begin" },
-                { step: "4", text: "Start to understand — maybe for the first time — why your body has been feeling the way it has" },
+                { step: "4", text: "Start to understand â€” maybe for the first time â€” why your body has been feeling the way it has" },
               ].map((item) => (
                 <motion.div key={item.step} variants={fadeUp} className="flex items-center gap-5 text-left">
                   <div
@@ -562,13 +561,13 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── Second CTA ── */}
+      {/* â”€â”€ Second CTA â”€â”€ */}
       <section className="py-12 px-6" style={{ backgroundColor: "#EDE6D6" }}>
         <div className="max-w-lg mx-auto text-center">
           <h3 className="font-cormorant font-bold text-3xl md:text-4xl mb-2" style={{ color: "#2D5A27" }}>
             Ready to Begin?
           </h3>
-          <p className="font-jost text-sm mb-6" style={{ color: "rgba(92,61,30,0.65)" }}>Scroll up to claim your free guide — or tap below.</p>
+          <p className="font-jost text-sm mb-6" style={{ color: "rgba(92,61,30,0.65)" }}>Scroll up to claim your free guide â€” or tap below.</p>
           <a
             href="#top"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
@@ -580,7 +579,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── Scripture ── */}
+      {/* â”€â”€ Scripture â”€â”€ */}
       <section className="py-16 md:py-24 px-6 relative overflow-hidden" style={{ backgroundColor: "#7A9E7E" }}>
         {/* Subtle pattern */}
         <div className="absolute inset-0 opacity-10 pointer-events-none"
@@ -598,18 +597,18 @@ export default function LandingPage() {
             &ldquo;He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul.&rdquo;
           </p>
           <p className="font-jost text-xs tracking-[0.25em] uppercase" style={{ color: "rgba(254,252,247,0.75)" }}>
-            — Psalm 23:2–3
+            â€” Psalm 23:2â€“3
           </p>
           <div className="h-px w-16 mx-auto mt-8" style={{ background: "rgba(254,252,247,0.5)" }} />
         </motion.div>
       </section>
 
-      {/* ── Footer ── */}
+      {/* â”€â”€ Footer â”€â”€ */}
       <footer className="py-8 px-6 text-center border-t" style={{ borderColor: "rgba(139,105,20,0.15)" }}>
         <p className="font-cormorant italic text-lg mb-1" style={{ color: "#2D5A27" }}>Eat the Trees, Drink the Leaves</p>
         <p className="font-jost text-xs mb-3" style={{ color: "#8B6914" }}>eatthetreesdrinktheleaves.com</p>
         <p className="font-jost text-[11px] leading-relaxed max-w-lg mx-auto" style={{ color: "rgba(92,61,30,0.5)" }}>
-          © Eat the Trees, Drink the Leaves · eatthetreesdrinktheleaves.com<br />
+          Â© Eat the Trees, Drink the Leaves Â· eatthetreesdrinktheleaves.com<br />
           This guide is for educational purposes only and is not intended to diagnose, treat, cure, or prevent any disease.
         </p>
       </footer>
