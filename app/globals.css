@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --linen: #F5F0E8;
+  --linen-dark: #EDE6D6;
+  --forest: #2D5A27;
+  --forest-light: #3a7232;
+  --gold: #8B6914;
+  --gold-light: #C4961A;
+  --sage: #7A9E7E;
+  --sage-light: #9AB89E;
+  --cream: #FDFAF4;
+  --bark: #5C3D1E;
+  --warm-white: #FEFCF7;
+}
+
+@layer base {
+  body {
+    background-color: var(--linen);
+    color: #3a2e1e;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-cormorant), serif;
+  }
+}
+
+@layer utilities {
+  .font-cormorant {
+    font-family: var(--font-cormorant), serif;
+  }
+
+  .font-jost {
+    font-family: var(--font-jost), sans-serif;
+  }
+
+  .text-forest { color: var(--forest); }
+  .text-gold { color: var(--gold); }
+  .text-sage { color: var(--sage); }
+  .text-bark { color: var(--bark); }
+  .bg-linen { background-color: var(--linen); }
+  .bg-linen-dark { background-color: var(--linen-dark); }
+  .bg-forest { background-color: var(--forest); }
+  .bg-sage { background-color: var(--sage); }
+  .bg-cream { background-color: var(--cream); }
+  .bg-warm-white { background-color: var(--warm-white); }
+  .border-gold { border-color: var(--gold); }
+  .border-forest { border-color: var(--forest); }
+  .border-sage { border-color: var(--sage); }
+}
+
+/* Decorative border utility */
+.botanical-border {
+  position: relative;
+}
+.botanical-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(139, 105, 20, 0.25);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Gold shimmer on headlines */
+.gold-rule {
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 0 auto;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Form input focus ring in forest green */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(45, 90, 39, 0.35);
+}
